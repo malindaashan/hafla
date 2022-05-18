@@ -1,0 +1,39 @@
+<html>
+<body>
+<h1>Welcome page</h1>
+</body>
+<script>
+const letter = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+    'V', 'W', 'X', 'Y', 'Z'
+];
+
+function printDiamod(input) {
+    var arrlen = letter.indexOf(input)
+   // var splitedArr = letter.slice(0, letter.indexOf(input) + 1)
+    var result = []
+    for (var i = 0; i <= arrlen; i++) {
+        var diamond = "";
+        for (var j = 0; j < arrlen - i; j++) {
+            diamond += " ";
+        }
+        diamond += letter[i];
+
+
+        if (letter[i] != 'A') {
+            for (var j = 0; j < 2 * i - 1; j++) {
+                diamond += " ";
+            }
+            diamond += letter[i];
+        }
+        result[i] = diamond
+        console.log(diamond);
+
+    }
+	
+    for (var i = arrlen - 1; i >= 0; i--) {
+        console.log(result[i]);
+    }
+}
+printDiamod("Z")
+</script>
+</html>
